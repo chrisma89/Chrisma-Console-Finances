@@ -143,7 +143,7 @@ let averageChanges = 0;
 totalChange = 0;
 var greatestIncrease = 0;
 var dateOfgreatestIncrease = "";
-var greatestdecrease = 0;
+var greatestDecrease = 0;
 var dateOfgreatestDecrease = "";
 
 
@@ -155,6 +155,12 @@ for (let i = 1; i < finances.length; i++){
            greatestIncrease = averageChanges;
            dateOfgreatestIncrease = finances[i][0];
   }
+
+  if (averageChanges < greatestDecrease) {
+     greatestDecrease = averageChanges;
+     dateOfgreatestDecrease = finances [i][0];
+   
+  }
 }
 
 // console.log(averageChanges)
@@ -164,14 +170,15 @@ averageTotal = (totalChange/ (86 - 1))
 console.log("Average Change:" + Math.floor(averageTotal*100)/100);
 
 console.log("Greatest Increase in Profits/Losses: " + dateOfgreatestIncrease + " ($" + greatestIncrease +")")
-// console.log(dateOfgreatestIncrease)
   
-// The greatest increase in Profit/Losses (date and amount) over the entire period.
+console.log(greatestDecrease);
+console.log(dateOfgreatestDecrease);
+//! The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 // The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
-var greatestIncrease;
-var dateOfgreatestIncrease;
-var greatestdecrease;
-var dateOfgreatestDecrease;
+// var greatestIncrease;
+// var dateOfgreatestIncrease;
+// var greatestdecrease;
+// var dateOfgreatestDecrease;
 
