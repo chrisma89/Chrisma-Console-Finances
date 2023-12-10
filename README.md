@@ -10,7 +10,7 @@ The dataset consists of a nested array of data, including a number and a date in
 
 The total number of months was calculated by using the length() function.
 
-Accessing the second data inside the array was new and I read up about it and found that it can be accessed with square brackets similar to indexing of the array. The total was then added up using a 'for loop'.
+Accessing the second data inside the nested array was new and I read up about it and found that it can be accessed with square brackets similar to indexing of the array. The total was then added up using a 'for loop'.
 
 I created another 'for loop' to calculate the average change and declared variables for the greatest increase/decrease and their corresponding dates. The loop was set up to iterate through all the values in the profits/losses and substract from the previous one. The average was then compared to the variables set for greatest increase and greatest decrease and when true, the value and date were logged in the console.
 
