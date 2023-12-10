@@ -167,12 +167,12 @@ for (let i = 1; i < finances.length; i++){
 
 averageTotal = (totalChange/ (86 - 1))
 
-console.log("Average Change:" + Math.floor(averageTotal*100)/100);
+console.log("Average Change: " + Math.floor(averageTotal*100)/100);
 
 console.log("Greatest Increase in Profits/Losses: " + dateOfgreatestIncrease + " ($" + greatestIncrease +")")
   
-console.log(greatestDecrease);
-console.log(dateOfgreatestDecrease);
+console.log("Greatest Decrease in Profits/Losses: " + dateOfgreatestDecrease + " ($" + greatestDecrease +")");
+// console.log(dateOfgreatestDecrease);
 //! The greatest increase in Profit/Losses (date and amount) over the entire period.
 
 // The greatest decrease in Profit/Losses (date and amount) over the entire period.
