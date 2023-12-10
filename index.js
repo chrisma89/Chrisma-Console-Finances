@@ -103,44 +103,54 @@ var finances = [
 
 // !The average of the changes in Profit / Losses over the entire period.
   // !Need a variable to track the average change
-  // That will make use of the current & previous variables we set up before
-// You will need to track what the total change in Profit / Losses are from month to month and then find the average.
-// (Total / (Number of months - 1))
+  // !That will make use of the current & previous variables we set up before
+// !You will need to track what the total change in Profit / Losses are from month to month and then find the average.
+// !(Total / (Number of months - 1))
 
-// The greatest increase in Profit / Losses(date and amount) over the entire period.
-  // Need a variable for the greatest increase
-  // On each iteration, compare the current change in profits/losses to what's currently stored
-  // If the change is more, replace what's currently stored in the variable
+//! The greatest increase in Profit / Losses(date and amount) over the entire period.
+  // !Need a variable for the greatest increase
+  // !On each iteration, compare the current change in profits/losses to what's currently stored
+  // !If the change is more, replace what's currently stored in the variable
 
-// The greatest decrease in Profit / Losses(date and amount) over the entire period.
-  // Need a variable for the greatest decrease
-  // On each iteration, compare the current change in profits/losses to what's currently stored
-  // If the loss is greater, replace what's currently stored in the variable
+// !The greatest decrease in Profit / Losses(date and amount) over the entire period.
+  //! Need a variable for the greatest decrease
+  //!On each iteration, compare the current change in profits/losses to what's currently stored
+  // !If the loss is greater, replace what's currently stored in the variable
 
-// variables:
-// total number of months
-// rolling total of profits
-// greatest increase (month & amt)
-// greatest loss (month & amt)
-// average of the changes
+//!variables:
+//! total number of months
+//! rolling total of profits
+//! greatest increase (month & amt)
+//! greatest loss (month & amt)
+//!average of the changes
 
-// variables declared inside the loop:
-// current data point
-// previous data point
+//! variables declared inside the loop:
+//! current data point
+//! previous data point
 
+// Heading 
 
 console.log("Financial Analysis \n----------------")
+
+// Calculate total no of months in the dataset 
+
 console.log(`Total Months: ${finances.length}`)
 
+//  Calculate Total Net total Amount of Profits/losses during the entire period
+
 let totalFinances = 0;
+
 for (let i=0; i < finances.length ; i++){
+
   totalFinances += finances[i][1]
 }
+
 console.log(`Total: $${totalFinances}`)
 
+// Calculate greatest increase and greatest decrease in profits/losses 
 
-let averageChanges = 0;
-totalChange = 0;
+let averageChange = 0;
+let totalChange = 0;
 var greatestIncrease = 0;
 var dateOfgreatestIncrease = "";
 var greatestDecrease = 0;
@@ -148,37 +158,36 @@ var dateOfgreatestDecrease = "";
 
 
 for (let i = 1; i < finances.length; i++){
-  averageChanges = finances[i][1] - finances[i - 1][1]
-  totalChange += averageChanges
 
-  if (averageChanges > greatestIncrease) {
-           greatestIncrease = averageChanges;
-           dateOfgreatestIncrease = finances[i][0];
+  averageChange = finances[i][1] - finances[i - 1][1]
+  totalChange += averageChange
+
+  if (averageChange > greatestIncrease) {
+
+      greatestIncrease = averageChange;
+      dateOfgreatestIncrease = finances[i][0];
+
   }
 
-  if (averageChanges < greatestDecrease) {
-     greatestDecrease = averageChanges;
+  if (averageChange < greatestDecrease) {
+
+     greatestDecrease = averageChange;
      dateOfgreatestDecrease = finances [i][0];
-   
+
   }
 }
 
-// console.log(averageChanges)
+//  Calculating the average change of profits/losses
 
 averageTotal = (totalChange/ (86 - 1))
+
+//  Logging the data stored in the variables on to the console 
 
 console.log("Average Change: " + Math.floor(averageTotal*100)/100);
 
 console.log("Greatest Increase in Profits/Losses: " + dateOfgreatestIncrease + " ($" + greatestIncrease +")")
   
 console.log("Greatest Decrease in Profits/Losses: " + dateOfgreatestDecrease + " ($" + greatestDecrease +")");
-// console.log(dateOfgreatestDecrease);
-//! The greatest increase in Profit/Losses (date and amount) over the entire period.
 
-// The greatest decrease in Profit/Losses (date and amount) over the entire period.
 
-// var greatestIncrease;
-// var dateOfgreatestIncrease;
-// var greatestdecrease;
-// var dateOfgreatestDecrease;
 
