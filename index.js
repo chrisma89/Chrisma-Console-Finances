@@ -151,13 +151,13 @@ console.log(`Total: $${totalFinances}`)
 
 let averageChange = 0;
 let totalChange = 0;
-var greatestIncrease = 0;
-var dateOfgreatestIncrease = "";
-var greatestDecrease = 0;
-var dateOfgreatestDecrease = "";
+let greatestIncrease = 0;
+let dateOfgreatestIncrease = "";
+let greatestDecrease = 0;
+let dateOfgreatestDecrease = "";
 
 
-for (let i = 1; i < finances.length; i++){
+for (let i = 1; i < finances.length; i++) {
 
   averageChange = finances[i][1] - finances[i - 1][1]
   totalChange += averageChange
@@ -179,13 +179,13 @@ for (let i = 1; i < finances.length; i++){
 
 //  Calculating the average change of profits/losses
 
-averageTotal = (totalChange/ (86 - 1))
-
-//  Logging the data stored in the variables on to the console 
+averageTotal = (totalChange/ (86 - 1));
 
 console.log("Average Change: " + Math.floor(averageTotal*100)/100);
 
-console.log("Greatest Increase in Profits/Losses: " + dateOfgreatestIncrease + " ($" + greatestIncrease +")")
+//  Logging the data stored in the variables on to the console 
+
+console.log("Greatest Increase in Profits/Losses: " + dateOfgreatestIncrease + " ($" + greatestIncrease +")");
   
 console.log("Greatest Decrease in Profits/Losses: " + dateOfgreatestDecrease + " ($" + greatestDecrease +")");
 
