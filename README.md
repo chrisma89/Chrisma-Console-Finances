@@ -49,7 +49,7 @@ The screenshot of the webpage is below : ![webpagescreenshot](./Screenshot%20of%
 ### Credits
 
 The starter code including the dataset was provided by the bootcampspot through edx and skills for life. 
-The pseudocode was provided to the classs by Laura Cole, our instructor. Many Thnaks Laura. 
+The pseudocode was provided to the classs by Laura Cole, our instructor. Many Thanks Laura. 
 The readme file was written with some inspiration from https://github.com/othneildrew/Best-README-Template/blob/master/README.md
 
 
